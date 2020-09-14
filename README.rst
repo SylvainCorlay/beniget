@@ -1,21 +1,21 @@
 Gast, Beniget!
 ==============
 
-Beniget is a collection of Compile-time analyse on Python Abstract Syntax Tree(AST).
-It's a building block to write static analyzer or compiler for Python.
+Beniget is a collection of compile-time analysis tools for the Python Abstract Syntax Tree(AST).
+It is meant as a building block for Python compilers and static analysers.
 
-Beniget relies on `gast <https://pypi.org/project/gast/>`_ to provide a cross
-version abstraction of the AST, effectively working on both Python2 and
-Python3.
+Beniget relies on `gast <https://pypi.org/project/gast/>`_ to provide a cross-version
+abstraction of the AST, effectively working on both Python2 and Python3.
+
 
 API
 ---
 
-Basically Beniget provides three analyse:
+Beniget provides three types of analysis:
 
 - ``beniget.Ancestors`` that maps each node to the list of enclosing nodes;
-- ``beniget.DefUseChains`` that maps each node to the list of definition points in that node;
-- ``beniget.UseDefChains`` that maps each node to the list of possible definition of that node.
+- ``beniget.DefUseChains`` that maps each node to the list of definition points of that node;
+- ``beniget.UseDefChains`` that maps each node to the list of possible uses of that node.
 
 See sample usages and/or run ``pydoc beniget`` for more information :-).
 
@@ -233,5 +233,5 @@ let's use the UseDef chains combined with the ancestors.
 Acknowledgments
 ---------------
 
-Beniget is in Pierre Augier's debt, for he triggered the birth of beniget and provided
+Beniget is in Pierre Augier's debt, for he triggered the birth of Beniget and provided
 countless meaningful bug reports and advices. Trugarez!
